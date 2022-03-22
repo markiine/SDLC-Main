@@ -55,15 +55,28 @@
             text-decoration: none;
             cursor: pointer;
         }
+
+        td,th {
+            border: 1px solid black;
+            padding: 1rem;
+        }
+
+        th {
+            color: #fff;
+            background-color: darkblue;
+        }
+
+    
+    
     </style>
 </head>
 
 <body>
 
-    <h2>Modal Example</h2>
+    <h2>Colour & Shades Database</h2>
 
     <!-- Trigger/Open The Modal -->
-    <button id="myBtn">Open Modal</button>
+    <button id="myBtn">Open ERD</button>
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
@@ -71,21 +84,109 @@
         <!-- Modal content -->
         <div class="modal-content">
             <span class="close">&times;</span>
-            <p>Some text in the Modal..</p>
+            <h3>Colour & Shades ERD</h3>
+            <img src="../images/Colour&ShadesERD.drawio.png" alt="">
+
+            <h3>ERD Description</h3>
+
+            <h4>Table - Primary Colour</h4>
+            <ul>        
+              <li>This table is used to sort primary colours. It shows primary colour names and identifying numbers.</li>        
+              <li>The ID attribute gives each color a unique number for identification.</li>
+              <li>The Primary Colour Name attribute gives color names.</li>        
+              <li>This table has one primary key ID and it is used a foreign key in the Shades table.</li>
+            </ul>
+      
+            <h4>Table - Shades</h4>
+            <ul>        
+              <li>This table is used to sort colour shades and see what primary colours they connect with using the Primary Colour ID attribute.</li>           
+              <li>The ID attribute gives each shade a unique number for identification.</li>        
+              <li>Primary Colour ID attribute is used to connect primary colour to a shade.</li>
+              <li>Colour Name attribute is used to know what colour shade there is.</li>        
+              <li>This table uses primary key Primary Colour ID from Primary Colour table as a foreign key to connect shade to a colour. Shades can have one primary colour and colours can have many shades.</li>
+            </ul>
+      
         </div>
 
     </div>
 
+    <h4>Primary Colour</h4>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Primary Colour Name</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Red</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Blue</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Yellow</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Green</td>
+      </tr>    
+    </table>
+  
+    <h4>Shades</h4>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Primary Colour ID</th>
+        <th>Color Name</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>Azure</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>3</td>
+        <td>Lemon</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>2</td>
+        <td>Cyan</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>1</td>
+        <td>Salmon pink</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>3</td>
+        <td>Mustard</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>4</td>
+        <td>Honeydew</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>4</td>
+        <td>Jungle Green</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>1</td>
+        <td>Crimson</td>
+      </tr>       
+    </table>
 
 
-
-
-
-
-
-
-
-
+    <footer style="text-align: center; margin-top: 5rem;">
+        Copyright 2022 &#169 D.M.K
+    </footer>
 
 
     <script>
