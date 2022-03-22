@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>SDLC Models</title>
+</head>
+<body>
+    <h2>Accordion</h2>
+
+        <button class="accordion">Waterfall/Koskmudel</button>
+        <div class="panel">
+        <p>Koskmudelis jaguneb kogu tarkvaraarenduse protsess etappideks, kus ühe faasi väljund toimib järgmise faasi sisendina. 
+            Järgmine etapp algab alles siis, kui eelmine etapp on lõpule jõudnud.
+            Koskmudel (ka klassikaline mudel) on esimene kirjeldatud tarkvarasüsteemi elutsükli mudel, mis lähtus tavalistest tootmisprotsessidest ehituses, mehhaanikas vms. 
+            Mudeli kirjeldas Winston W. Royce 1970. aastal. Koskmudel on kõige vanem ja kõige rohkem kritiseeritud protsessimudel.
+            Põhiidee kohaselt jagatakse tegevused nii, et iga tegevus toimub jadamisi eraldi etapina. 
+            Royce jagas protsessi järgmisteks põhietappideks (tasub tähele panna, et etappide nimekiri varieerub erinevate autorite esituses):
+            <li>Nõuete määratlemine</li>
+            <li>Süsteemi ja tarkvara kavandamine</li>
+            <li>Teostus ja moodulite testimine</li>
+            <li>Integratsioon ja süsteemi testimine</li>
+            <li>Kasutamine ja hooldus - tavaliselt kõige pikem faas</li>
+            Iga faasi tulemiks on üks või mitu dokumenti, mis kinnitatakse. Järgmine faas ei tohiks alata enne, kui eelmine on lõpetatud. 
+            Faasidel on teatav ülekate ja info edastamine ühest teise.</p>
+        
+        <img src="../images/jugamudel.jpg" alt="" width="500px">
+        <img src="../images/koskmudel.jpeg" alt="" width="500px">
+        </div>
+        
+        <button class="accordion">Iterative/Iteratiivne mudel</button>
+        <div class="panel">
+        <p>See mudel algab väiksemate nõudmistega ja SDLC protsessi käivitamiseks ei vaja see toote spetsifikatsiooni täielikku konteksti. 
+            See protsess on korduv ja iga SDLC protsessi kordamise korral tehakse tarkvara uuem versioon. 
+            Iga iteratsioon võib kesta 2–6 nädalat. Iga iteratsioon arendab selles lähenemises eraldi komponenti. See mudel nõuab ka režiimiressurssi kui jugamudel.</p>
+
+        <img src="../images/iteratiivnemudel.png" alt="" width="500px">
+        </div>
+        
+        <button class="accordion">Spiral/Spiraalmudel</button>
+        <div class="panel">
+        <p>See mudel on kombinatsioon juga- ja spiraalmudelist ning töötab korduvalt. 
+            Projektiga seotud riskide põhjal juhendab see mudel meeskonda ühe või mitme SDLC mudeli, näiteks juga või Iteratiivse mudeli elementide vastuvõtmisel. 
+            Siin jagatakse tarkvara elutsükkel väiksemateks osadeks ja tarkvarale saab lisada uusi funktsioone isegi SDLC hilises staadiumis.</p>
+
+        <img src="../images/spiraalmudel.png" alt="" width="500px">
+        </div>
+
+        <button class="accordion">Prototyping/Prototüübi mudel</button>
+        <div class="panel">
+        <p>Mittetäieliku tarkvaraprogrammi ja selle versioonide väljatöötamiseks kasutatakse prototüüpimudelit. 
+            See on tarkvara arendamise meetod. Seda kasutatakse lõpptoote varasema versiooni loomiseks ja testimiseks. 
+            See on iteratiivne protsess ja see mudel töötab peamiselt olukordades, kus nõuded on olemas aegsasti. 
+            Prototüübi mudelis tuleks nõue võimalikult detailselt määratleda. Kujundus on välja töötatud uue süsteemi jaoks ja sellest disainist luuakse esimene prototüüp. 
+            Prototüübi mudelis koostatakse tööprogrammid kiiresti.</p>
+
+        <img src="../images/prototüübimudel.png" alt="" width="500px">
+        </div>
+        
+        <button class="accordion">V-Shape/V-mudel</button>
+        <div class="panel">
+        <p>V-mudel on põhimõtteliselt laiendus jugamudelile, kus katsetamine ja arendusetapid on kavandatud paralleelselt. 
+            Üks pool koosneb verifitseerimisetapist, teine ​​aga valideerimisetapist, mis ühendatakse lõpuks kodeerimisega. Järgmine olek algab alles siis, 
+            kui eelmine olek on lõpule viidud.</p>
+
+        <img src="../images/v-mudel.jpg" alt="" width="500px">
+        </div>
+        
+        <button class="accordion">Agile/Agile mudel</button>
+        <div class="panel">
+        <p>Agiilne mudeliprotsess SDLC-s hõlbustab arendajaid meeskonnaga suhtlemisel ja annab kliendile käimasoleva projekti kohta täieliku idee ning teeb vajadusel muudatusi. 
+            See paneb arendajad muudatusi tegema vastavalt kliendi interaktsioonile ja säästab ümbertöötamisel palju aega. 
+            Kuna see lähenemine töötab arendamisel ja testimisel käsikäes, töötavad arendajad ja testijad koos.</p>
+
+        <img src="../images/agilemudel.png.png" alt="" width="500px">
+        </div>
+        
+        <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+            panel.style.display = "none";
+            } else {
+            panel.style.display = "block";
+            }
+        });
+        }
+        </script>
+</body>
+</html>
