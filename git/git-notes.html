@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        code{
+            background-color:black;
+            color: #fff;
+            font-size: 1.5rem;
+        }
+    </style>
+    <title>Git and GitHub</title>
+</head>
+<body>
+    <div>
+        <h1>Git</h1>
+        <p>
+            <li>Git is a free Version Control System, which allows you to manage source code history(different versions of source code history).</li>
+            <li>It is designed to handle everything from small projects with speed and effeciency.</li>
+        <br>
+        <a href="https://git-scm.com/downloads" target="_blank">Git is local, you can download to your computer over here.</a>
+        <br>
+        <br> 
+        It doesn’t come along with interface, you can control Git with terminal commands.
+        <ul>
+            <li><swan><b>Repository</b> – The location where your code history is stored</swan></li>
+            <li><swan><b>Branch</b> – “Folder” within the resporitory containing commits</swan></li>
+            <li><swan><b>Commits</b> – Different stages of your code inside a branch </swan></li>
+        </ul>
+        <a href="https://www.youtube.com/watch?v=_OZVJpLHUaI" target="_blank">Git for beginners</a>
+        <br>
+        </p>
+    </div>
+    
+
+    <div>
+
+        <h2>Commands</h2>
+        <code>$ git init</code>
+        <p>The git init command creates a new Git repository. It can be used to convert an existing, unversioned project to a Git repository or initialize a new, empty repository. Most other Git commands are not available outside of an initialized repository, so this is usually the first command you'll run in a new project. </p>
+        <code>$ git status</code>
+        <p>The git status command displays the state of the working directory and the staging area. It lets you see which changes have been staged, which haven't, and which files aren't being tracked by Git. Status output does not show you any information regarding the committed project history.</p>
+        <code>$ git add .</code>
+        <p>This will simply add all the files of project folder. The git add command adds a change in the working directory to the staging area. It tells Git that you want to include updates to a particular file in the next commit. However, git add doesn't really affect the repository in any significant way—changes are not actually recorded until you run git commit .</p>
+        <code>$ git commit -m "..."</code>
+        <p>The -m flag, which stands for message, is used to add a commit message to a commit.</p>
+        <code>$ git branch</code>
+        <p>The git branch command lets you create, list, rename, and delete branches.</p>
+        <code>$ git log</code>
+        <p>Git log is a utility tool to review and read a history of everything that happens to a repository. Multiple options can be used with a git log to make history more specific. Generally, the git log is a record of commits. Last commit will be the head of your branch. </p>
+        <code>$ git checkout -b new-feature </code>
+        <p>This will switch to a new branch new feature. (NB! new-feature is just a name, it can also be named other way).</p>
+        <code>$ git master</code>
+        <p>This will switch back to master branch. </p>
+        <code>$ git merge new-feature</code>
+        <p>If you want to merge the files from new feature to master branch. </p>
+        <code>$ git branch -D new-feature </code>
+        <p>Deletes the branch new-feature.</p>
+        
+        <p><u><b>How to go back to your previous commit?</b></u></p>
+        <p>Insert git log, copy the code which can be seen after commit with yellow font, insert git insert --hard and copy the code + press enter. </p>
+
+    </div>
+    <hr>
+
+    <div>
+        <h1>GitHub</h1>
+        <p>
+            <li>Github is a hosting and collaboration provider which has the purpose to host your git repositories.</li>
+            <li>It’s a web-based solution.</li>
+        <br>
+        <a href="https://github.com/" target="_blank">Github webpage</a>
+        <br>
+        You can push your git repositories to github, which allows other people to access your code.
+        <br>
+        <br>
+        <b>Adding new repository:</b>
+        <ul>
+            <li><swan>Click + icon – Create a new repository – Give a name to a repository – Create repository</swan></li>
+        </ul>
+        <a href="https://www.youtube.com/watch?v=mVnZVw4KJnc" target="_blank">GitHub for beginners</a>  
+        </p>
+
+
+        <h2>Commands</h2>
+        <code>$ git remote add origin</code>
+        <p>To add a new remote, use the git remote add command on the terminal, in the directory your repository is stored at. The git remote add command takes two arguments: A remote name, for example, origin.</p>
+        <code>$ git remote -v</code>
+        <p>You can see the name of the name of a repository and url behind this repository</p>
+        <code>$ git push -u origin master</code>
+        <p>Push your branches to the remote repository</p>
+        <code>$ git push</code>
+        <p>The remote repository is the origin. Push the files. Uploads all local branch commits to the remote.</p>
+        <code>$ git clone</code>
+        <p>This command is used to obtain a repository from an existing URL.</p>
+        <code>$ git fetch</code>
+        <p>Git fetch is the command that tells your local git to retrieve the latest meta-data info from the original (yet doesn't do any file transferring. 
+            It's more like just checking to see if there are any changes available). </p>
+        <code>$ git merge origin/master</code>
+        <p>To merge the local repository with the remote tracking branch.</p>
+        <code>$ git pull</code>
+        <p>Git pull on the other hand does that and brings (copy) those changes from the remote repository.
+            Updates your current local working branch with all new commits from the corresponding remote branch on GitHub. Git pull is a combination of git fetch and git merge.
+        </p>
+        <code>$ git remote rm origin</code>
+        <p>Remove the repository.</p>
+    </div>
+    <hr>
+</body>
+</html>
